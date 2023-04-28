@@ -1,2 +1,2 @@
-# Azure-Hands-On-Labs_Terraform
- Azure Hands-on Labs using Terraform as (IaC)
+# Azure-Hands-On-Labs_Terraform IaC
+ Azure VM deployment using Terraform
