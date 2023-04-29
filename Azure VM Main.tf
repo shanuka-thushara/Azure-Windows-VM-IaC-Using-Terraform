@@ -10,3 +10,9 @@ resource "azurerm_virtual_network" "VNET" {
   resource_group_name = azurerm_resource_group.RG.name
 }
 
+resource "azurerm_subnet" "AzureSubnet" {
+  name                 = "AzureSubnet"
+  resource_group_name  = azurerm_resource_group.RG.name
+  virtual_network_name = azurerm_virtual_network.VNET.name
+  address_prefixes     = ["10.0.1.0/24"]
+}
