@@ -1,2 +1,3 @@
-# Azure-Hands-On-Labs_Terraform IaC
+# Creating an Azure Windows VM using Terraform
+
  Azure VM deployment using Terraform
