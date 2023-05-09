@@ -1,10 +1,10 @@
-# Azure Resource Group
+# Create a Azure Resource Group
 resource "azurerm_resource_group" "RG" {
   name     = "Test-RG"
   location = "East US"
 }
 
-# Azure Virtual Network
+# Create a Azure Virtual Network
 resource "azurerm_virtual_network" "VNET" {
   name                = "Test-VNET"
   address_space       = ["10.0.0.0/16"]
@@ -12,6 +12,7 @@ resource "azurerm_virtual_network" "VNET" {
   resource_group_name = azurerm_resource_group.RG.name
 }
 
+# Create a Subnet 
 resource "azurerm_subnet" "AzureSubnet" {
   name                 = "AzureSubnet"
   resource_group_name  = azurerm_resource_group.RG.name
@@ -19,6 +20,7 @@ resource "azurerm_subnet" "AzureSubnet" {
   address_prefixes     = ["10.0.1.0/24"]
 }
 
+# Create a NIC 
 resource "azurerm_network_interface" "nic" {
   name                = "Test-nic"
   location            = azurerm_resource_group.RG.location
@@ -31,6 +33,7 @@ resource "azurerm_network_interface" "nic" {
   }
 }
 
+# Create a Public IP
 resource "azurerm_public_ip" "PIP" {
   name                = "Public-IP"
   resource_group_name = azurerm_resource_group.RG.name
@@ -38,12 +41,14 @@ resource "azurerm_public_ip" "PIP" {
   allocation_method   = "Static"
   }
 
+# Create a Network Security Group 
 resource "azurerm_network_security_group" "NSG" {
   name                = "Test-NSG"
   location            = azurerm_resource_group.RG.location
   resource_group_name = azurerm_resource_group.RG.name
 }
 
+# Create a Azure Virtual Machine
 resource "azurerm_windows_virtual_machine" "VM" {
   name                = "Test-VM"
   resource_group_name = azurerm_resource_group.RG.name
@@ -55,6 +60,7 @@ resource "azurerm_windows_virtual_machine" "VM" {
     azurerm_network_interface.nic.id,
   ]
 
+# Create a OS disk
   os_disk {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
