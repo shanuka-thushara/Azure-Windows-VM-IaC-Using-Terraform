@@ -8,3 +8,11 @@ By using Terraform to define your infrastructure, you can version your code, mai
 # Solution Diagram
 
 ![Solution Digram](https://user-images.githubusercontent.com/68106560/236700041-7f0cacbf-da91-4c86-adf6-fd300275f345.png)
+
+# Key commands in terraform 
+
+* Terraform init - Initialize a terraform working directory. Example: **terraform init**
+
+* Terraform plan - Generate and show an execution plan. Example: **terraform plan**
+
+* terraform apply - Build or change infrastructure. Example: **terraform apply**
