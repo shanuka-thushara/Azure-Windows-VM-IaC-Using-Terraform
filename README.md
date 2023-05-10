@@ -9,6 +9,12 @@ By using Terraform to define your infrastructure, you can version your code, mai
 
 ![Solution Digram](https://user-images.githubusercontent.com/68106560/236700041-7f0cacbf-da91-4c86-adf6-fd300275f345.png)
 
+## Learn Objectives
+
+* Write Terraform code to define an Azure Windows VM and associated resources, such as a virtual network and storage account
+* Deploy their VM to Azure using Terraform
+* Modify their Terraform code to make changes to their infrastructure and redeploy as needed.
+
 # Key commands in terraform 
 
 * Terraform init - Initialize a terraform working directory. Example: **terraform init**
