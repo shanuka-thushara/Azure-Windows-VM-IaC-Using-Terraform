@@ -22,3 +22,5 @@ By using Terraform to define your infrastructure, you can version your code, mai
 * Terraform plan - Generate and show an execution plan. Example: **terraform plan**
 
 * terraform apply - Build or change infrastructure. Example: **terraform apply**
+
+* terraform show - Show the state file in a human-readable format: **terraform show**
